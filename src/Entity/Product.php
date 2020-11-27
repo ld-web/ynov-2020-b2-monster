@@ -10,6 +10,8 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Product
 {
+    const NB_TOP = 10;
+
     /**
      * @ORM\Id
      * @ORM\GeneratedValue

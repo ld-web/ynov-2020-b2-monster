@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bienvenue sur Monster Products !{% endblock %}
+
+{% block body %}
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Monster products</h1>
+    <p class="lead">Tous les produits dont vous rêvez.</p>
+  </div>
+</div>
+<div class="container">
+  <h2 class="mb-5">Nos derniers produits</h2>
+  {% for product in products %}
+  <div class="d-lg-flex border-bottom border-dark pb-3 mb-3">
+    <div class="mr-lg-3 product-img">
+      <a href="#">
+        <img class="img-fluid" src="{{ product.image }}" alt="{{ product.name }}" />
+      </a>
+    </div>
+    <div class="infos">
+      <h3>
+        <a href="#" class="text-decoration-none text-body">
+          {{ product.name }}
+        </a>
+      </h3>
+      <p>{{ product.created|date('d/m/Y') }}</p>
+      <a href="#" class="btn btn-light">En savoir +</a>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

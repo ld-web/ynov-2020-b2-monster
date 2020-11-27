@@ -1,0 +1,13 @@
+body {
+  font-size: 19px;
+}
+
+.product-img img {
+  transition: opacity 100ms ease;
+  max-width: 350px;
+  opacity: 1;
+}
+
+.product-img img:hover {
+  opacity: 0.4;
+}
